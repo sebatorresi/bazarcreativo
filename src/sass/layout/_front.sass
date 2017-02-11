@@ -1,0 +1,236 @@
+@lost gutter 60px
+
+body
+  margin: 0
+  padding: 0
+  // lost-utility: edit
+
+header
+  lost-center: 960px
+  text-align: center
+
+.box
+  display: block
+  width: 90%
+  height: 30px
+  margin: 0 auto
+  background: $cyan
+  @media all and (min-width: $bp-large)
+    width: 60%
+
+.logo
+  margin-top: 1.5rem
+  @media all and (min-width: $bp-large)
+    margin-top: 3rem
+  svg
+    width: 175px
+    @media all and (min-width: $bp-large)
+      width: 250px
+
+.description
+  position: relative
+  display: block
+  .left-image
+    position: relative
+    top: 0
+    margin-top: 1.5rem
+    width: 100%
+    @media all and (min-width: $bp-large)
+      top:  350px
+      left: 0
+    img
+      position: absolute
+      z-index: 50
+      transform: translate(-50%, 0)
+      left: 50%
+      display: block
+      margin-top: 2rem
+      width: 20em
+      height: auto
+      @media all and (min-width: $bp-large)
+        left: 0
+        margin: inherit
+        transform: none
+    .colours
+      position: absolute
+      z-index: 0
+      top: 0
+      left: 0
+      width: 12em
+      height: 22em
+      background: $green
+      @media all and (min-width: $bp-large)
+        top: -14em
+        left: 0
+        width: 6em
+        height: 30em
+
+  .description-text
+    lost-center: 960px
+    position: relative
+    z-index: 100
+    display: block
+    .vertical-text
+      transform: rotate(90deg)
+      transform-origin: left top 0
+      position: absolute
+      top: 280px
+      left: 100px
+      display: inline-block
+      text-align: center
+      white-space: nowrap
+      border-bottom: 1px solid $red
+      @media all and (min-width: $bp-large)
+        top: -40px
+        left: 260px
+    .main-description
+      width: 100%
+      padding: 300px 20px 0 130px
+      @media all and (min-width: $bp-large)
+        padding: 400px 100px 0 330px
+      .first-p
+        letter-spacing: 2px
+        font-weight: 400
+
+  .right-image
+    position: relative
+    display: block
+    right: 0
+    top: 0
+    @media all and (min-width: $bp-large)
+      top:  -800px
+    img
+      position: absolute
+      z-index: 50
+      right: 25%
+      display: block
+      margin-top: 2.5rem
+      width: 20em
+      height: auto
+      @media all and (min-width: $bp-large)
+        top: -200px
+        right: 5%
+        margin: 0
+        width: 24em
+        height: auto
+    .colours
+      position: absolute
+      z-index: 0
+      top: 0
+      right: 0
+      width: 15em
+      height: 20em
+      margin-top: -5rem
+      background: $orange
+      @media all and (min-width: $bp-large)
+        top: 40%
+        right: 0
+        width: 35em
+        height: 25em
+
+.aside
+  lost-center: 960px
+  position: relative
+  display: block
+  margin-top: 22rem
+  padding: 0 0 4rem
+  background: $yellow
+  @media all and (min-width: $bp-large)
+    background: none
+  .image-wrap
+    @media all and (min-width: $bp-large)
+      position: relative
+      right: -100px
+      display: block
+      .colours
+        position: absolute
+        z-index: 0
+        top: -250px
+        right: 0
+        width: 80%
+        height: 25em
+        background: $yellow
+      img
+        top: -550px
+        right: 5%
+        width: 25em
+        height: auto
+  p
+    margin-top: -6rem
+    padding: 3rem 1rem 0 3rem
+    @media all and (min-width: $bp-large)
+      position: absolute
+      z-index: 100
+      margin-top: -9.5em
+      padding: 0 400px 0 30px
+
+  img
+    position: absolute
+    z-index: 50
+    top: 40px
+    right: 0
+    display: block
+    margin-top: 15rem
+    width: 18em
+    height: auto
+
+.contact
+  lost-center: 1280px
+  position: relative
+  display: block
+  padding: 0 2rem
+  margin-top: 18rem
+  color: white
+  background: $red
+  @media all and (min-width: $bp-large)
+    top: -70px
+    margin-bottom: 3em
+    padding: 4rem
+
+a
+  font-size: responsive 1rem 2rem
+  color: white
+.emilio
+  display: inline-block
+  padding-bottom: .3rem
+  border-bottom: 1px dashed white
+h2
+  display: inline-block
+  margin-top: -1.3rem
+  border-bottom: 1px solid white
+ul
+  list-style: none
+  font-size: responsive 1.3rem 1.6rem
+  span, a
+    display: block
+    font-size: responsive .85rem 1rem
+    font-weight: 700
+.social
+  float: none
+  margin-top: 2rem
+  padding-bottom: 1rem
+  @media all and (min-width: $bp-large)
+    float: right
+    margin-top: 3rem
+  li
+    padding: .5rem 1.3rem
+    border: 1px solid white
+    &:first-child
+      border-bottom: none
+
+.left
+  @media all and (min-width: $bp-large)
+    lost-column: 1/2
+    position: absolute
+    top: -30px
+    img
+      display: block
+      margin-top: 5rem
+      width: 35em
+      height: auto
+
+.right
+  text-align: center
+  @media all and (min-width: $bp-large)
+    lost-column: 1/2
+    text-align: inherit
