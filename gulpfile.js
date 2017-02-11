@@ -1,3 +1,5 @@
+// npm install --save-dev gulp gulp-postcss gulp-sass gulp-cssnano gulp-sourcemaps autoprefixer gulp-plumber gulp-watch lost gulp-rucksack gulp-newer gulp-imagemin
+
 var gulp = require('gulp');
 var postcss = require('gulp-postcss');
 var sass = require('gulp-sass');
