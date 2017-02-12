@@ -14,7 +14,7 @@ var newer = require('gulp-newer');
 var imagemin = require('gulp-imagemin');
 
 gulp.task('workflow', function () {
-  return gulp.src('./src/sass/**/*.sass')
+  return gulp.src('src/sass/**/*.sass')
         .pipe(sourcemaps.init())
         .pipe(plumber())
         .pipe(sass({
@@ -30,9 +30,9 @@ gulp.task('workflow', function () {
         .pipe(cssnano())
         .pipe(sourcemaps.write('.'))
         .on('error', sass.logError)
-        .pipe(gulp.dest('./build/css/'))
+        .pipe(gulp.dest('build/css/'))
 });
 
 gulp.task('default', function () {
-	gulp.watch('./src/sass/**/*.sass', ['workflow']);
+	gulp.watch('src/sass/**/*.sass', ['workflow']);
 });
