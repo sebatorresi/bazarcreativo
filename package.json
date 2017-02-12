@@ -20,9 +20,11 @@
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.4.1",
     "gulp-watch": "^4.3.11",
-    "lost": "^8.0.0"
+    "lost": "^8.0.0",
+    "postcss-object-fit-images": "^1.1.2"
   },
   "dependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "object-fit-images": "^3.1.2"
   }
 }

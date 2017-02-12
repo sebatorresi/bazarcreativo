@@ -12,6 +12,7 @@ var lost = require('lost');
 var rucksack = require('gulp-rucksack');
 var newer = require('gulp-newer');
 var imagemin = require('gulp-imagemin');
+var objectFitImages = require('object-fit-images');
 
 gulp.task('workflow', function () {
   return gulp.src('src/sass/**/*.sass')
