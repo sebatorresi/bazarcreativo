@@ -1,0 +1,54 @@
+.global-nav
+  lost-center: 100%
+  // lost-utility: edit
+  display: flex
+  align-items: center
+  .brand
+    lost-column: 3/12 0
+  nav
+    lost-column: 9/12 1
+  ul
+    display: flex
+    justify-content: flex-end
+    margin: 0
+    padding: 0
+    li
+      position: relative
+      margin-left: 60px
+      &::before
+        content: ''
+        position: absolute
+        top: 35%
+        left: 100%
+        width: 20px
+        height: 1px
+        margin-left: 20px
+        background: $yellow
+      &:last-child::before
+        content: ''
+        display: none
+      a
+        position: relative
+        font-size: responsive .9rem 1.1rem
+        font-weight: $light
+        text-transform: uppercase
+        color: $bgc
+        &::after
+          content: ''
+          display: block
+          margin: auto
+          height: 1px
+          width: 0px
+          margin-top: 10px
+          background: transparent
+          transition: width .5s ease, background-color .5s ease
+        &:hover::after
+          width: 100%
+          background: $bgc
+        &.current
+          &::after
+            display: block
+            width: 100%
+            height: 1px
+            margin-top: 10px
+            background: $bgc
