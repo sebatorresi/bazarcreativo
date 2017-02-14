@@ -111,49 +111,118 @@
     </header>
 
     <main>
-      <!-- Los eventos -->
+      <!-- Los eventos , para que se puedan poner nuevos eventos desde el administrador. Solo la fecha.-->
       <section class="events">
         <h2>¡Próximo evento!</h2>
-        <p>La <strong>próxima feria de Bazar Creativo</strong> se realizará el  <strong id="date-event">20 de mayo 2017</strong>. Si querés exponer reservá tu cupo llamando al 0981 538 357 o escribiendo a info@bazarcreativo.com.py  ¡Te esperamos!</p>
+        <p>La <strong>próxima feria de Bazar Creativo</strong> se realizará el  <strong id="date-event">20 de mayo 2017</strong>. Si querés exponer reservá tu cupo llamando al 0981 538 357 o escribiendo a <a href="mailto:info@bazarcreativo.com.py">info(@)bazarcreativo.com.py</a>. <strong>¡Te esperamos!</strong></p>
       </section>
 
-      <section class="container">
+      <section class="container motive">
         <!-- Izquierda: imagenes más el texto resaltado -->
         <div class="motive-images">
-          <img src="" alt="" class="img-top">
-          <img src="" alt="" class="img-bot">
+          <div class="img-bot">
+            <img src="/images/capturando-momentos-Bazar-Creativo.jpg" alt="Fotógrafo captura la variedad de productos" title="Capturando momentos">
+          </div>
+          <div class="img-top">
+            <img src="/images/artesanía-en-el-Bazar-Creativo.jpg" alt="Artesanos exponen en el Bazar Creativo" title="Artesanos">
+          </div>
           <div class="highlight">
             <p>Brindamos soluciones</p>
           </div>
         </div>
 
         <!-- derecha: texto + call to action -->
-        <div class="content">
+        <div class="motive-content">
           <h2>¿Qué hacemos?</h2>
           <p>Somos más que una feria. Informáte sobre nuestros seminarios, talleres, asesoria en formalizacion y publicidad para micro emprendedores.</p>
-          <div class="know-us">
-            <a href="/nosotros">Conocénos más</a>
+          <div class="learn-more">
+            <a class="action" href="/nosotros">Conocénos más</a>
           </div>
         </div>
       </section>
     </main>
 
     <section class="container latest-blog">
-      <div class="left">
-        <h2>Últimas noticias de nuestro blog</h2>
+      <div class="blog-image">
+        <img src="/images/detalle-de-la-feria-Bazar-Creativo.jpg" alt="Detalle de stand de un expositor en Bazar Creativo" title="Detalle de un stand">
       </div>
-      <!-- Últimas entradas del blog, solo los títulos -->
-      <div class="right">
-        <ul>
-          <li><a href="#">¡El próximo 20 de mayo tendremos Bazar!</a></li>
-          <li><a href="#">Emprender es avanzar de manera decidida, salir de la zona de confort.</a></li>
-          <li><a href="#">¿Por qué Bazar Creativo?</a></li>
-          <li><a href="#">Historia de Edgar Servín</a></li>
-          <li><a href="#">¿Qué puedo encontrar en Bazar Creativo?</a></li>
-          <li><a href="#">Nde Valé ¿Una extensión de Bazar?</a></li>
-        </ul>
+
+      <div class="latest-entries">
+        <div class="left">
+          <h2>Últimas noticias de nuestro blog</h2>
+        </div>
+
+        <!-- Últimas entradas del blog,  FECHA - TÍTULO - TAG. Últimas 5 noticias-->
+        <div class="right">
+          <ul>
+            <li>
+              <!-- fecha de la noticia -->
+              <div class="date-blog">10 <span>Feb</span></div>
+              <!-- link a la noticia -->
+              <a href="#">¡El próximo 20 de mayo tendremos Bazar!</a>
+              <!-- Tag de referencia de la notica, lo que te había explicado de los colores que se diferencien por cada Tag, si es mucho quilombo asignar un color a cada tag que se cree dejamos el tag como texto se listo. -->
+              <div class="tag-blog">- en Bazar</div>
+            </li>
+
+            <li><div class="date-blog">04 <span>Feb</span></div><a href="#">Emprender es avanzar de manera decidida, salir de la zona de confort.</a><div class="tag-blog">- en Emprendimiento</div></li>
+            <li><div class="date-blog">01 <span>Feb</span></div><a href="#">¿Por qué Bazar Creativo?</a><div class="tag-blog">- en Bazar</div></li>
+            <li><div class="date-blog">28 <span>Ene</span></div><a href="#">Historia de Edgar Servín</a><div class="tag-blog">- en Historias</div></li>
+            <li><div class="date-blog">26 <span>Ene</span></div><a href="#">¿Qué puedo encontrar en Bazar Creativo?</a><div class="tag-blog">- en Bazar</div></li>
+          </ul>
+        </div>
       </div>
     </section>
+
+    <section class="container enter-catalog">
+      <div class="enter-catalog-images">
+        <div class="img-bot">
+          <img src="/images/letras-corporeas-bazar-creativo.jpg" alt="Letras corporeas de Bazar Creativo" title="Bazar Creativo">
+        </div>
+        <div class="img-top">
+          <img src="/images/arte-en-vivo-bazar-creativo.jpg" alt="Artista pintando en vivo en la feria Bazar Creativo" title="Artista pintando">
+        </div>
+      </div>
+
+      <div class="enter-catalog-content">
+        <h2>¡Visitá nuestro catálogo!</h2>
+        <p>Descubrí a quienes inspiran al Bazar Creativo.</p>
+        <div class="learn-more">
+          <a class="action" href="/nosotros">¡Quiero!</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="global-footer">
+      <div class="footer">
+        <div class="contact">
+          <ul>
+            <li><h3>Seguí nuestras redes sociales</h3></li>
+            <li><a href="">Facebook</a></li>
+            <li><a href="">Instagram</a></li>
+            <li><h3>Llamá ó escribí</h3></li>
+            <li>0981 538 357</li>
+            <li><a href="mailto:info@bazarcreativo.com.py">info(@)bazarcreativo.com.py</a></li>
+          </ul>
+        </div>
+
+        <div class="newsletter">
+          <h3>¡Quiero recibir noticias sobre Bazar Creativo!</h3>
+          <div class="newsletter-area">
+            <input placeholder="Dirección de correo electrónico" class="newsletter-input" type="text" name="signup[email]" id="signup_email">
+            <button name="button" type="submit" class="newsletter-button" data-ga-event="Email capture signup" data-ga-action="CTA button click">Empezar</button>
+          </div>
+        </div>
+
+        <div class="copy">
+          <p>Bazar Creativo S.R.L. © 2017 todos los derechos reservados</p>
+          <ul>
+            <li><a href="">Términos & Condiciones</a></li>
+            <li><a href="">Tarifas</a></li>
+            <li><a href="">Política de Privacidad</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
 
     <svg id="skew-bg" viewBox="0 1226 1440 2753" preserveAspectRatio="none">
       <path fill="#EFE9DA" fill-rule="evenodd" d="M0 1226l1440 2753H0"/>

@@ -42,20 +42,147 @@
         right: 0
         width: 75%
         height: 60vh
-        object-fit: cover
-        +object-fit(cover)
         box-shadow: 0 7px 42px rgba($black, .2)
         img
-          width: 75%
           height: 60vh
+          object-fit: cover
+          +object-fit(cover)
 
 .events
-  lost-center: 960px
-  padding-top: 15rem
+  lost-center: 720px
+  margin-top: 13rem
+  padding: .8rem 0 2rem
+  border: 1px solid darken($darkbgc, 5%)
+  border-width: 1px 0
+  text-align: center
+  p
+    font-size: responsive .8rem 1.2rem
+  h2
+    color: $bordo
 
-.container
-  lost-center: 1440px
-  padding: 2rem
+.motive
+  // lost-utility: edit
+  .motive-images
+    lost-column: 8/12
+    position: relative
+    .highlight
+      display: none
+      width: 30%
+      margin: -5rem 0 0 30rem
+      border: .8rem solid $turk
+      p
+        display: block
+        font-weight: $bold
+        font-size: responsive 1.5rem 2.5rem
+        text-transform: uppercase
+        word-wrap: break-word
+        line-height: 1
+        color: $turk
+    .img-bot
+      width: 75%
+      height: 60vh
+      margin-left: 4rem
+      opacity: .85
+      img
+        height: 60vh
+        object-fit: cover
+        +object-fit(cover)
+    .img-top
+      z-index: 100
+      position: absolute
+      top: 15rem
+      left: 0
+      width: 35%
+      height: 60vh
+      opacity: .9
+      img
+        height: 60vh
+        box-shadow: 0 7px 42px rgba($black, .2)
+        object-fit: cover
+        object-position: 75% 50%
+        +object-fit(cover, 75% 50%)
+
+  .motive-content
+    lost-column: 4/12
+    text-align: right
+    h2
+      padding-left: 3rem
+      color: $blue
+
+
+.latest-blog
+  margin-top: 13rem
+  .blog-image
+    lost-column: 4/12 1
+    img
+      margin-top: -2rem
+      opacity: .85
+      box-shadow: 0 7px 42px rgba($black, .2)
+  .latest-entries
+    lost-column: 8/12 0
+    h2
+      padding-right: 30%
+      color: $green
+    ul
+      li
+        display: flex
+        align-items: center
+        padding: .7rem 1rem
+        line-height: 2
+        border-bottom: 1px solid darken($darkbgc, 5%)
+        &:first-child
+          border-top: 1px solid darken($darkbgc, 5%)
+        .date-blog
+          margin-right: 1rem
+          text-align: center
+          text-transform: uppercase
+          font-size: responsive .6rem .8rem
+          line-height: 1.2
+          color: darken($bgc, 40%)
+          span
+            display: block
+        .tag-blog
+          margin-left: .4rem
+          color: darken($bgc, 25%)
+          text-transform: uppercase
+          font-size: responsive .6rem .75rem
+        a
+          font-size: responsive .9rem 1.1rem
+          color: $text
+          border: none
+
+.enter-catalog
+  .enter-catalog-images
+    lost-column: 8/12
+    position: relative
+    .img-bot
+      width: 60%
+      height: 50vh
+      opacity: .85
+      img
+        height: 50vh
+        object-fit: cover
+        +object-fit(cover)
+    .img-top
+      z-index: 100
+      position: absolute
+      top: 20rem
+      left: 0
+      width: 60%
+      height: 40vh
+      margin-left: 12rem
+      opacity: .85
+      img
+        height: 40vh
+        box-shadow: 0 7px 42px rgba($black, .2)
+        object-fit: cover
+        object-position: 75% 50%
+        +object-fit(cover, 75% 50%)
+  .enter-catalog-content
+    lost-column: 4/12
+    text-align: right
+    h2
+      color: $orange
 
 
 // .box
