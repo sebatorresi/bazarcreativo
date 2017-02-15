@@ -23,7 +23,6 @@
         width: 20px
         height: 1px
         margin-left: 20px
-        background: $yellow
       &:last-child::before
         content: ''
         display: none
@@ -32,7 +31,6 @@
         font-size: responsive .9rem 1.1rem
         font-weight: $light
         text-transform: uppercase
-        color: $bgc
         &::after
           content: ''
           display: block
@@ -44,11 +42,37 @@
           transition: width .5s ease, background-color .5s ease
         &:hover::after
           width: 100%
-          background: $bgc
         &.current
           &::after
             display: block
             width: 100%
             height: 1px
             margin-top: 10px
-            background: $bgc
+
+#home
+  .global-nav
+      ul
+        li
+          &::before
+            background: $yellow
+          a
+            color: $bgc
+            &:hover::after
+              background: $bgc
+            &.current
+              &::after
+                background: $bgc
+
+#catalog
+  .global-nav
+      ul
+        li
+          &::before
+            background: $blue
+          a
+            color: $darktext
+            &:hover::after
+              background: $darktext
+            &.current
+              &::after
+                background: $darktext

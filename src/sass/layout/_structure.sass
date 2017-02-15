@@ -9,20 +9,49 @@ body
   text-rendering: optimizeLegibility
   // lost-utility: edit
 
+.global-nav
+  z-index: 500
+  position: absolute
+  top: 0
+  right: 0
+  left: 0
+  padding: 3rem 3rem 0 3rem
+
 .global-content
   lost-center: 100%
   position: relative
   overflow: hidden
   height: 100%
 
+.section-title
+  z-index: -100
+  position: absolute
+  right: -3rem
+  top: -6rem
+  display: block
+  width: 100vw
+  font-size: responsive 10rem 30rem
+  word-wrap: break-word
+  text-transform: uppercase
+  font-weight: $bold
+  line-height: .8
+  color: $darkbgc
+
 #skew-bg
   z-index: -100
   position: absolute
   bottom: 0
-  left: -500px
   right: 0
   width: 100%
   height: 100%
+
+#home
+  #skew-bg
+    left: -500px
+
+#catalog
+  #skew-bg
+    left: -200px
 
 .container
   lost-center: 1440px
@@ -40,14 +69,53 @@ strong
   margin-top: 15rem
   padding: 2rem 0
   color: $bgc
-  background: $darkblue
+  background: rgba($darkblue, .95)
   a
     color: $bgc
     border-color: $bgc
   .footer
     lost-center: 960px
+    font-size: responsive .8rem 1.1rem
+    font-weight: $light
+    .newsletter
+      text-align: right
+    .newsletter-input
+      padding: 14px 16px 14px 12px
+      border-radius: 4px
+      border: 1px solid $bgc
+      color: $darkblue
+      background: $bgc
+    .newsletter-button
+      display: inline-block
+      margin-top: 1rem
+      padding: 14px 16px 12px 12px
+      border-radius: 4px
+      border: 1px solid $bgc
+      background: transparent
+      &:active,
+      &:hover
+        background: $bgc
+        color: $darkblue
+        transform: translateY(1px)
+        box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08)
+        transition: all .25s ease
+    h3
+      margin: 0
+      font-size: responsive .8rem 1.2rem
+      font-weight: inherit
     .contact
       lost-column: 6/12 0 0
+      .social-footer
+        border: none
+        svg
+          height: 28px
+      ul
+        li
+          margin-bottom: .6rem
+          &:nth-child(2),
+            display: inline-block
+            float: left
+            margin-right: 1rem
     .newsletter
       lost-column: 6/12 0 0
     .copy
