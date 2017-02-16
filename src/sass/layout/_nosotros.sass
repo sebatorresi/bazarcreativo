@@ -1,0 +1,74 @@
+.nosotros
+  lost-center: 1440px
+  padding: 0 3rem
+  margin-top: 15rem
+  // lost-utility: edit
+  .nosotros-block-left, .nosotros-block-right
+    lost-utility: clearfix
+    h1
+      color: $blue
+    .left, .right
+      position: relative
+
+  .nosotros-block-left
+    .left
+      lost-column: 4/12
+    .right
+      lost-column: 8/12
+      .img-bot
+        position: absolute
+        right: 8rem
+        width: 80%
+        height: 50vh
+        opacity: .85
+        img
+          height: 60vh
+          object-fit: cover
+          +object-fit(cover)
+      .img-top
+        z-index: 100
+        position: absolute
+        top: 15rem
+        right: 0
+        width: 50%
+        height: 60vh
+        opacity: .9
+        img
+          height: 60vh
+          box-shadow: 0 7px 42px rgba($black, .2)
+          object-fit: cover
+          object-position: 75% 50%
+          +object-fit(cover, 75% 50%)
+
+  .nosotros-block-right
+    margin-top: 13rem
+    .left
+      lost-column: 8/12
+      .img-bot
+        z-index: 100
+        position: absolute
+        left: 6rem
+        width: 80%
+        height: 50vh
+        opacity: .85
+        img
+          height: 60vh
+          box-shadow: 0 7px 42px rgba($black, .2)
+          object-fit: cover
+          +object-fit(cover)
+      .img-top
+        // z-index: 100
+        // position: absolute
+        // top: 15rem
+        // left: 0
+        margin-top: 25em
+        width: 50%
+        height: 60vh
+        opacity: .9
+        img
+          height: 60vh
+          object-fit: cover
+          object-position: 75% 50%
+          +object-fit(cover, 75% 50%)
+    .right
+      lost-column: 4/12
