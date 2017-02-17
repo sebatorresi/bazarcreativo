@@ -1,0 +1,43 @@
+.blog-list
+  lost-utility: clearfix
+  lost-center: 1024px flex
+  padding: 0 3rem
+  margin-top: 15rem
+  .blog-excerpt
+    padding: 3rem 0
+    border: 1px solid darken($bgc, 10%)
+    border-width: 1px 0 0
+    .tag-bazar
+      color: $red
+    .tag-empre
+      color: $yellow
+    .tag-histo
+      color: $green
+    &:last-of-type
+      border-width: 0 0 1px
+  .blog-thumb
+    lost-column: 4/12
+    height: 30vh
+    img
+      height: 30vh
+      object-fit: cover
+      +object-fit(cover)
+  .excerpt
+    lost-column: 8/12
+    .blog-date
+      margin-bottom: 1rem
+      font-size: responsive .7rem .85rem
+      text-transform: uppercase
+      color: $dateblog
+    .read-more
+      display: inline-block
+      float: right
+      margin-top: 1rem
+  .pagination
+    lost-center: 400px
+    .pag-left, .pag-right
+      lost-column: 6/12
+      a
+        border: none
+      svg
+        width: 42px
