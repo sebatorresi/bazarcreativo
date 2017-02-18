@@ -185,3 +185,51 @@
 
 .product-info
   lost-column: 4/12
+  h1
+    color: $darkblue
+  .breadcrumb
+    display: flex
+    li
+      margin-right: .5rem
+      &::after
+        content: '>'
+        margin-left: .5rem
+        color: $darkblue
+      &:last-child
+        border-bottom: 2px solid $darkblue
+        &::after
+          content: ''
+          display: none
+      a
+        color: $darkblue
+        border: none
+  .product-price
+    display: block
+    margin-top: 1rem
+    padding-top: 1rem
+    border-top: 1px solid darken($bgc, 15%)
+    color: $darkblue
+    font-weight: $bold
+    font-size: responsive 1rem 1.5rem
+  .share-product
+    margin-top: 1rem
+    span
+      display: inline-block
+      float: left
+      margin-right: 1rem
+      padding-top: .35rem
+      text-transform: uppercase
+      font-size: responsive .6rem .8em
+      color: $darkblue
+    a
+      border: none
+    svg
+      width: 28px
+      fill: darken($bgc, 25%)
+      transition: all .5s ease
+      &:hover
+        fill: $turk
+    ul
+      display: flex
+      li
+        margin-right: .5rem
