@@ -75,7 +75,7 @@
       .btn-box
         background-color: darken($bordo, 15%)
 
-.catalog-section
+.catalog-section, .brand-info
   h1
     display: block
     margin-bottom: 2rem
@@ -94,7 +94,7 @@
         font-weight: $normal
         pointer-events: none
         cursor: default
-        color: lighten($darkblue, 15%)
+        color: $darkblue
         &::after
           content: ''
           position: absolute
@@ -105,7 +105,7 @@
           width: 0px
           margin-top: 5px
           width: 100%
-          background: lighten($darkblue, 15%)
+          background: $darkblue
       a
         position: relative
         font-size: responsive .7rem .9rem
@@ -152,19 +152,28 @@
 
 .brand-info
   lost-column: 4/12
+  h1
+    border-bottom: none
+    span
+      display: block
+      margin-top: .5rem
+      font-size: responsive .8rem 1rem
+      a
+        color: $darkblue
+        border-bottom: 2px solid $darkblue
 
 .brand-list
   lost-column: 8/12
   .brand-block
     lost-column: 1/2
-    margin-bottom: 60px
+    margin-bottom: 30px
     .inner-block
       .brand-box
         position: absolute
         right: 3%
         bottom: 3%
         padding: .5rem 1rem
-        background: $darkblue
+        background: lighten($turk, 5%)
       a
         border: none
         color: $bgc
