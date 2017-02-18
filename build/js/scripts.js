@@ -28,6 +28,7 @@ jQuery(document).ready(function($) {
   $('.product-slider').unslider({
     autoplay: true,
     infinite: true,
-    arrows: false
+    arrows: false,
+    delay: 5000
   });
 });
