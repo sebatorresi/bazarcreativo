@@ -21,3 +21,13 @@ function makeItWork() {
   $( "#data strong" ).html(i) ;
 }
 });
+
+
+//Unslider
+jQuery(document).ready(function($) {
+  $('.product-slider').unslider({
+    autoplay: true,
+    infinite: true,
+    arrows: false
+  });
+});
