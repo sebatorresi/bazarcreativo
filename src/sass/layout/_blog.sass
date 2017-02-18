@@ -1,4 +1,4 @@
-.blog-list
+.blog-list, .blog-random
   lost-utility: clearfix
   lost-center: 1024px flex
   padding: 0 3rem
@@ -24,6 +24,8 @@
       +object-fit(cover)
   .excerpt
     lost-column: 8/12
+    a
+      color: $darkblue
     .blog-date
       margin-bottom: 1rem
       font-size: responsive .7rem .85rem
@@ -33,11 +35,134 @@
       display: inline-block
       float: right
       margin-top: 1rem
+      border-color: $darkblue
+  h5
+    font-size: responsive 1.5rem 2em
+    color: $darkblue
   .pagination
-    lost-center: 400px
+    display: flex
+    width: 100%
+    margin-top: 3rem
     .pag-left, .pag-right
       lost-column: 6/12
       a
+        display: flex
+        align-items: center
+        text-transform: uppercase
+        font-size: responsive .7rem .85rem
         border: none
+        color: $darkblue
       svg
         width: 42px
+    .pag-left,
+      text-align: left
+      span
+        margin-left: 1rem
+    .pag-right
+      text-align: right
+      span
+        margin-right: 1rem
+      a
+        justify-content: flex-end
+
+.blog-random
+  margin-top: 5rem
+
+.blog-entry
+  width: 100%
+  margin-top: 15rem
+  padding-bottom: 3rem
+  border-bottom: 1px solid darken($bgc, 10%)
+  .entry-content, .entry-title
+    lost-utility: clearfix
+    lost-center: 1024px
+  .entry-title
+    z-index: 200
+    position: relative
+    width: 100%
+    height: auto
+    margin-top: -35vh
+    padding: 5rem
+    &.en-historia
+      background: rgba($blue, .8)
+    h1
+      display: block
+      margin: 0
+      padding: 0 0 1.8rem
+      font-size: responsive 3.5rem 6.5rem
+      color: $bgc
+      border: 1px solid $bgc
+      border-width: 1px 0
+    .entry-date, .entry-tag
+      display: block
+      padding: 1rem 0
+      text-transform: uppercase
+      font-size: responsive .7rem .8rem
+      color: $bgc
+    .entry-date
+      text-align: right
+  .entry-content
+    margin-top: 5rem
+    h2, h3, h4
+      display: block
+      padding: 0 5rem
+      color: $darktext
+    h2
+      font-size: responsive 2rem 2.5em
+    h3
+      font-size: responsive 1.5rem 2em
+    h4
+      font-size: responsive 1rem 1.5em
+    p
+      margin-bottom: 3rem
+      padding: 0 5rem
+    .full-img, .half-img
+      margin-bottom: 3rem
+      figure
+        display: table
+        margin: 0 auto
+        max-width: 100%
+        text-align: center
+        img
+          display: block
+          max-width: 100%
+          width: 100%
+        figcaption
+          display: table-caption
+          caption-side: bottom
+          margin-top: .5rem
+          color: darken($bgc, 25%)
+    .full-img
+      figcaption
+        text-align: center
+    .half-img
+      clear: both
+      float: none
+      max-width: 600px
+      &.img-right
+        float: right
+        margin-left: 3rem
+      &.img-left
+        float: left
+        margin-right: 3rem
+    .img-right
+      figcaption
+        text-align: right
+        padding-right: 1.5rem
+    .img-left
+      figcaption
+        text-align: left
+        padding-left: 1.5rem
+    blockquote
+      width: 400px
+      margin: 0 auto
+      padding: 3rem
+      font-size: responsive 1rem 1.5em
+      font-weight: $bold
+      color: $turk
+      &:nth-of-type(even)
+        float: right
+        text-align: right
+      &:nth-of-type(odd)
+        float: left
+        text-align: left

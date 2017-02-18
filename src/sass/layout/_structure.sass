@@ -21,6 +21,8 @@ body
   position: relative
   overflow: hidden
   height: 100%
+  img
+    user-select: none
 
 .section-title
   z-index: -100
@@ -36,6 +38,7 @@ body
   font-weight: $bold
   line-height: .8
   color: $darkbgc
+  user-select: none
 
 #skew-bg
   z-index: -100
@@ -49,7 +52,7 @@ body
   #skew-bg
     left: -500px
 
-#catalog, #about
+#catalog, #about, #blog
   #skew-bg
     left: -200px
 
@@ -60,9 +63,11 @@ body
 ul,ol
   list-style: none
 
-strong
+strong, b
   font-weight: 700
 
+i, em
+  font-style: italic
 
 .global-footer
   lost-center: 100%
