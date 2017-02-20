@@ -5,17 +5,27 @@ a
   color: $blue
   border-bottom: 1px dotted $blue
 
+.learn-more
+  display: flex
+  justify-content: center
+  margin-top: 1rem
+  @media all and (min-width: $bp-med)
+    justify-content: flex-end
+    margin-top: 2.5rem
+
 .action
   display: inline-block
-  margin-top: 2.5rem
-  padding: 14px 16px 12px 12px
+  padding: 7px 10px 6px 10px
   border-radius: 4px
   border: 1px solid $pinky
   color: $pinky
+  transition: all .25s ease
+  @media all and (min-width: $bp-med)
+    padding: 14px 16px 12px 12px
   &:active,
-  &:hover
+  &:hover,
+  &:focus
     background: $pinky
     color: $bgc
     transform: translateY(1px)
     box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08)
-    transition: all .25s ease

@@ -24,11 +24,13 @@ function makeItWork() {
 
 
 //Unslider
-jQuery(document).ready(function($) {
-  $('.product-slider').unslider({
-    autoplay: true,
-    infinite: true,
-    arrows: false,
-    delay: 5000
+if (document.location.pathname == "/detalle-de-la-marca.html") {
+  jQuery(document).ready(function($) {
+    $('.product-slider').unslider({
+      autoplay: true,
+      infinite: true,
+      arrows: false,
+      delay: 5000
+    });
   });
-});
+}
