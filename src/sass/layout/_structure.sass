@@ -121,20 +121,29 @@ i, em
       font-size: responsive .8rem 1.2rem
       font-weight: inherit
     .contact
-      lost-column: 6/12 0 0
+      display: block
+      text-align: center
+      @media all and (min-width: $bp-med)
+        lost-column: 6/12 0 0
       .social-footer
         border: none
         svg
-          height: 28px
+          height: 18px
+          @media all and (min-width: $bp-med)
+            height: 28px
       ul
         li
-          margin-bottom: .6rem
+          display: inline-block
+          margin-bottom: .3rem
+          @media all and (min-width: $bp-med)
+            margin-bottom: .6rem
           &:nth-child(2),
             display: inline-block
             float: left
             margin-right: 1rem
     .newsletter
-      lost-column: 6/12 0 0
+      @media all and (min-width: $bp-med)
+        lost-column: 6/12 0 0
     .copy
       display: block
       clear: both
