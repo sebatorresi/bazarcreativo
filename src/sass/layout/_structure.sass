@@ -86,16 +86,20 @@ i, em
   background: rgba($darkblue, .95)
   @media all and (min-width: $bp-med)
     margin-top: 15rem
-    padding: 2rem 0
+    padding: 2rem  0 1rem
   a
     color: $bgc
     border-color: $bgc
   .footer
     lost-center: 960px
-    font-size: responsive .8rem 1.1rem
+    font-size: responsive .8rem 1rem
     font-weight: $light
+    text-align: center
+    @media all and (min-width: $bp-med)
+      text-align: inherit
     .newsletter
-      text-align: right
+      @media all and (min-width: $bp-med)
+        text-align: right
     .newsletter-input
       padding: 14px 16px 14px 12px
       border-radius: 4px
@@ -118,43 +122,41 @@ i, em
         transition: all .25s ease
     h3
       margin: 0
-      font-size: responsive .8rem 1.2rem
-      font-weight: inherit
-    .contact
-      display: block
-      text-align: center
-      @media all and (min-width: $bp-med)
-        lost-column: 6/12 0 0
-      .social-footer
+      font-size: responsive .8rem 1rem
+      font-weight: $bold
+  .contact
+    @media all and (min-width: $bp-med)
+      lost-column: 6/12
+    .social
+      margin-top: 1rem
+      li
+        display: inline-block
+        margin-right: .5rem
+      a
         border: none
         svg
-          height: 18px
-          @media all and (min-width: $bp-med)
-            height: 28px
-      ul
-        li
-          display: inline-block
-          margin-bottom: .3rem
-          @media all and (min-width: $bp-med)
-            margin-bottom: .6rem
-          &:nth-child(2),
-            display: inline-block
-            float: left
-            margin-right: 1rem
-    .newsletter
-      @media all and (min-width: $bp-med)
-        lost-column: 6/12 0 0
-    .copy
-      display: block
-      clear: both
-      text-align: center
-      p, a
-        color: $bgc
-        font-size: responsive .8rem 1rem
-      ul
-        display: flex
-        justify-content: center
-        li
-          margin-right: 1rem
-          &:last-child
-            margin: 0
+          height: 28px
+          fill: $bgc
+    .info-foot
+      li
+        margin-top: .5rem
+  .newsletter
+    @media all and (min-width: $bp-med)
+      lost-column: 6/12
+  .copy
+    lost-center: 960px
+    margin-top: 1rem
+    padding: 1rem 0
+    text-align: center
+    border-top: 1px solid darken($darkblue, 1%)
+    p, a
+      color: rgba($bgc, .8)
+      font-size: responsive .75rem .9rem
+    ul
+      display: flex
+      margin: 0
+      justify-content: center
+      li
+        margin-right: 1rem
+        &:last-child
+          margin: 0
