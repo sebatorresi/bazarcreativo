@@ -34,3 +34,39 @@ if (document.location.pathname == "/detalle-de-la-marca.html") {
     });
   });
 }
+
+var controlit = $("#burger");
+var menuToggle = new TimelineMax({paused:true, reversed:true});
+menuToggle
+  .set('#burger', {className:"-=closemenu"})
+  .set('#burger', {className:"+=openmenu"})
+  .to('#burger .top', .2, {y:'-9px', transformOrigin: '50% 50%'}, 'burg')
+  .to('#burger .bot', .2, {y:'9px', transformOrigin: '50% 50%'}, 'burg')
+  .to('#burger .mid', .2, {scale:0.1, transformOrigin: '50% 50%'}, 'burg')
+  .add('rotate')
+  .to('#burger .top', .2, {y:'5'}, 'rotate')
+  .to('#burger .bot', .2, {y:'-5'}, 'rotate')
+  .to('#burger .top', .2, {rotationZ:45, transformOrigin: '50% 50%'}, 'rotate')
+  .to('#burger .bot', .2, {rotationZ:-45, transformOrigin: '50% 50%'}, 'rotate')
+ // .set('#burger .mid', {opacity:0})//temp fix for stupid iOS rotate y bug
+
+controlit.click(function () {
+  menuToggle.reversed() ? menuToggle.restart() : menuToggle.reverse();
+});
+
+
+    
+
+//Menu
+// Toggle menu
+$(document).ready(function(){
+  $('.handle').on('click', function(){
+    $('nav ul').toggleClass('toggle');
+  });
+});
+
+$(document).ready(function(){
+  $('.handle').click(function(){
+    $(this).toggleClass('open');
+  });
+});

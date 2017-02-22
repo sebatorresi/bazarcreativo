@@ -1,17 +1,22 @@
 .global-nav
   lost-center: 100%
   // lost-utility: edit
-  display: flex
-  align-items: center
-  .brand
-    lost-column: 3/12 0
-  nav
-    lost-column: 9/12 1
-  ul
+  @media all and (min-width: $bp-med)
     display: flex
-    justify-content: flex-end
-    margin: 0
-    padding: 0
+    align-items: center
+  .brand
+    @media all and (min-width: $bp-med)
+      lost-column: 3/12 0
+  nav
+    @media all and (min-width: $bp-med)
+      lost-column: 9/12 1
+  ul
+    @media all and (min-width: $bp-med)
+      display: flex
+      justify-content: flex-end
+      margin: 0
+      padding: 0
+  @media all and (min-width: $bp-med)
     li
       position: relative
       margin-left: 60px
@@ -76,3 +81,69 @@
             &.current
               &::after
                 background: $darktext
+
+#home, #catalog, #about, #blog
+  nav
+    width: 100%
+    ul
+      overflow: hidden
+      flex-direction: column
+      height: 0
+      opacity: 0
+      transition: opacity 0.4s ease
+      text-align: center
+      padding-top: 2rem
+      @media all and (min-width: $bp-med)
+        flex-direction: inherit
+        overflow: inherit
+        padding: 0
+        opacity: inherit
+      &.toggle
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        display: flex
+        width: 100vw
+        height: 100vh
+        opacity: 1
+        padding-top: 50%
+        li
+          padding: 1rem
+          text-transform: uppercase
+          font-weight: $bold
+
+#home,
+  .toggle
+    background: rgba($red, .8)
+    a
+      color: $bgc
+    .current
+      padding-bottom: 5px
+      border-bottom: 1px solid $bgc
+
+#catalog, #about, #blog
+  .toggle
+    background: rgba($darkbgc, .8)
+    a
+      color: $darktext
+    .current
+      padding-bottom: 5px
+      border-bottom: 1px solid $darktext
+  .handle
+    svg
+      fill: $darktext
+      .mid
+        stroke: $darktext
+
+.handle
+  position: absolute
+  top: 2.5rem
+  right: 1rem
+  width: 35px
+  cursor: pointer
+  svg
+    width: 30px
+    fill: $bgc
+  @media all and (min-width: $bp-med)
+    display: none
