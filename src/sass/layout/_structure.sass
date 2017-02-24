@@ -35,11 +35,11 @@ body
 .section-title
   z-index: -100
   position: absolute
-  right: -3rem
-  top: -6rem
+  right: -1rem
+  top: -3rem
   display: block
   width: 100vw
-  font-size: responsive 10rem 30rem
+  font-size: responsive 8rem 30rem
   word-wrap: break-word
   text-transform: uppercase
   text-align: right
@@ -47,6 +47,9 @@ body
   line-height: .8
   color: $darkbgc
   user-select: none
+  @media all and (min-width: $bp-med)
+    right: -3rem
+    top: -6rem
 
 #skew-bg
   z-index: -100
@@ -58,11 +61,15 @@ body
 
 #home
   #skew-bg
-    left: -500px
+    left: -50px
+    @media all and (min-width: $bp-med)
+      left: -500px
 
 #catalog, #about, #blog
   #skew-bg
-    left: -200px
+    left: -5px
+    @media all and (min-width: $bp-med)
+      left: -200px
 
 .container
   lost-center: 1440px flex

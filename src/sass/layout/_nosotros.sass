@@ -1,7 +1,9 @@
 .nosotros
   lost-center: 1440px
   padding: 0 3rem
-  margin-top: 15rem
+  margin-top: 8rem
+  @media all and (min-width: $bp-med)
+    margin-top: 15rem
   // lost-utility: edit
   .nosotros-block-left, .nosotros-block-right
     lost-utility: clearfix
@@ -12,19 +14,27 @@
 
   .nosotros-block-left
     .left
-      lost-column: 4/12
+      @media all and (min-width: $bp-med)
+        lost-column: 4/12
     .right
-      lost-column: 8/12
+      @media all and (min-width: $bp-med)
+        lost-column: 8/12
       .img-bot
         position: absolute
-        right: 8rem
-        width: 80%
-        height: 50vh
+        right: 0
+        width: 70%
+        height: 35vh
         opacity: .85
-        img
+        @media all and (min-width: $bp-med)
+          right: 8rem
+          width: 80%
           height: 60vh
+        img
+          height: 35vh
           object-fit: cover
           +object-fit(cover)
+          @media all and (min-width: $bp-med)
+            height: 60vh
       .img-top
         z-index: 100
         position: absolute
@@ -41,35 +51,58 @@
           +object-fit(cover, 75% 50%)
 
   .nosotros-block-right
+    display: flex
+    flex-flow: row wrap
     margin-top: 13rem
+    @media all and (min-width: $bp-med)
+      flex-flow: inherit
     .left
-      lost-column: 8/12
+      order: 2
+      display: block
+      width: 100%
+      @media all and (min-width: $bp-med)
+        lost-column: 8/12
+        order: inherit
       .img-bot
         z-index: 100
         position: absolute
-        left: 6rem
+        top: 3rem
+        right: 0
         width: 80%
-        height: 50vh
+        height: 40vh
         opacity: .85
+        @media all and (min-width: $bp-med)
+          top: 10rem
+          left: 6rem
+          height: 50vh
         img
-          height: 60vh
+          height: 40vh
           box-shadow: 0 7px 42px rgba($black, .2)
           object-fit: cover
           +object-fit(cover)
+          @media all and (min-width: $bp-med)
+            height: 50vh
       .img-top
-        // z-index: 100
-        // position: absolute
-        // top: 15rem
-        // left: 0
-        margin-top: 25em
-        width: 50%
-        height: 60vh
+        margin-top: 15rem
+        width: 70%
+        height: 40vh
         opacity: .9
-        img
+        @media all and (min-width: $bp-med)
+          margin-top: 25rem
+          width: 50%
           height: 60vh
+        img
+          height: 40vh
           object-fit: cover
           object-position: 75% 50%
           +object-fit(cover, 75% 50%)
+          @media all and (min-width: $bp-med)
+            height: 60vh
     .right
-      lost-column: 4/12
-      padding-top: 10rem
+      order: 1
+      display: block
+      width: 100%
+      @media all and (min-width: $bp-med)
+        lost-column: 4/12
+        order: inherit
+        padding-top: 10rem
