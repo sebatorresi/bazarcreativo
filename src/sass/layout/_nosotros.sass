@@ -14,8 +14,10 @@
 
   .nosotros-block-left
     .left
+      margin-bottom: 2rem
       @media all and (min-width: $bp-med)
         lost-column: 4/12
+        margin-bottom: 0
     .right
       @media all and (min-width: $bp-med)
         lost-column: 8/12
@@ -38,24 +40,32 @@
       .img-top
         z-index: 100
         position: absolute
-        top: 15rem
-        right: 0
-        width: 50%
-        height: 60vh
+        top: 5rem
+        left: 0
+        width: 60%
+        height: 40vh
         opacity: .9
-        img
+        @media all and (min-width: $bp-med)
+          width: 50%
           height: 60vh
+          top: 15rem
+          right: 0
+        img
+          height: 40vh
           box-shadow: 0 7px 42px rgba($black, .2)
           object-fit: cover
           object-position: 75% 50%
           +object-fit(cover, 75% 50%)
+          @media all and (min-width: $bp-med)
+            height: 60vh
 
   .nosotros-block-right
     display: flex
     flex-flow: row wrap
-    margin-top: 13rem
+    margin-top: 21rem
     @media all and (min-width: $bp-med)
       flex-flow: inherit
+      margin-top: 13rem
     .left
       order: 2
       display: block

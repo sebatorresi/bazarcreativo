@@ -2,11 +2,15 @@
   lost-utility: clearfix
   lost-center: 1024px flex
   padding: 0 3rem
-  margin-top: 15rem
+  margin-top: 8rem
+  @media all and (min-width: $bp-med)
+    margin-top: 15rem
   .blog-excerpt
-    padding: 3rem 0
+    padding: 1.5rem 0
     border: 1px solid darken($bgc, 10%)
     border-width: 1px 0 0
+    @media all and (min-width: $bp-med)
+      padding: 3rem 0
     .tag-bazar
       color: $red
     .tag-empre
@@ -16,14 +20,23 @@
     &:last-of-type
       border-width: 0 0 1px
   .blog-thumb
-    lost-column: 4/12
-    height: 30vh
-    img
+    width: 100%
+    height: 25vh
+    @media all and (min-width: $bp-med)
+      lost-column: 4/12
       height: 30vh
+    img
+      width: 100%
+      height: 25vh
       object-fit: cover
       +object-fit(cover)
+      @media all and (min-width: $bp-med)
+        height: 30vh
   .excerpt
-    lost-column: 8/12
+    margin-top: 1.5rem
+    @media all and (min-width: $bp-med)
+      lost-column: 8/12
+      margin-top: 0
     a
       color: $darkblue
     .blog-date
@@ -66,13 +79,17 @@
         justify-content: flex-end
 
 .blog-random
-  margin-top: 5rem
+  margin-top: 2.5rem
+  @media all and (min-width: $bp-med)
+    margin-top: 5rem
 
 .blog-entry
   width: 100%
-  margin-top: 15rem
+  margin-top: 8rem
   padding-bottom: 3rem
   border-bottom: 1px solid darken($bgc, 10%)
+  @media all and (min-width: $bp-med)
+    margin-top: 15rem
   .entry-content, .entry-title
     lost-utility: clearfix
     lost-center: 1024px
@@ -81,15 +98,18 @@
     position: relative
     width: 100%
     height: auto
-    margin-top: -35vh
-    padding: 5rem
+    margin-top: -4rem
+    padding: 2rem
+    @media all and (min-width: $bp-med)
+      margin-top: -35vh
+      padding: 5rem
     &.en-historia
       background: rgba($green, .8)
     h1
       display: block
       margin: 0
       padding: 0 0 1.8rem
-      font-size: responsive 3.5rem 6.5rem
+      font-size: responsive 2rem 6.5rem
       color: $bgc
       border: 1px solid $bgc
       border-width: 1px 0
@@ -102,11 +122,15 @@
     .entry-date
       text-align: right
   .entry-content
-    margin-top: 5rem
+    margin-top: 2rem
+    @media all and (min-width: $bp-med)
+      margin-top: 5rem
     h2, h3, h4
       display: block
-      padding: 0 5rem
+      padding-left: 2rem
       color: $darktext
+      @media all and (min-width: $bp-med)
+        padding-left: 3rem
     h2
       font-size: responsive 2rem 2.5em
     h3
@@ -114,10 +138,16 @@
     h4
       font-size: responsive 1rem 1.5em
     p
-      margin-bottom: 3rem
-      padding: 0 5rem
+      margin-bottom: 2rem
+      padding: 0 2rem
+      @media all and (min-width: $bp-med)
+        margin-bottom: 3rem
+        padding: 0 3rem
     .full-img, .half-img
-      margin-bottom: 3rem
+      margin-bottom: 2rem
+      @media all and (min-width: $bp-med)
+        padding: 0 5rem
+        margin-bottom: 3rem
       figure
         display: table
         margin: 0 auto
@@ -131,6 +161,7 @@
           display: table-caption
           caption-side: bottom
           margin-top: .5rem
+          font-size: responsive .75rem .9em
           color: darken($bgc, 25%)
     .full-img
       figcaption
@@ -154,11 +185,14 @@
         text-align: left
         padding-left: 1.5rem
     blockquote
-      width: 400px
+      width: 100%
       margin: 0 auto
-      padding: 3rem
+      padding: 0 1rem 2.5rem 1rem
       font-size: responsive 1rem 1.5em
       font-weight: $bold
+      @media all and (min-width: $bp-med)
+        width: 400px
+        padding: 3rem
       &:nth-of-type(even)
         float: right
         text-align: right
