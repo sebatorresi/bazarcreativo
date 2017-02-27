@@ -33,22 +33,22 @@
       .image-intro
         z-index: 150
         position: absolute
-        top: 40vh
+        top: 13rem
         right: 1.5rem
-        width: 70vw
-        height: 35vh
-        box-shadow: 0 7px 42px rgba($black, .2)
-        overflow: hidden
         @media all and (min-width: $bp-med)
-          top: 45vh
+          top: 22rem
           right: 0
-          width: 45vw
-          height: 60vh
+          // width: 45vw
+          // height: 60vh
         img
+          overflow: hidden
+          width: 60vw
           height: 35vh
           object-fit: cover
           +object-fit(cover)
+          box-shadow: 0 7px 42px rgba($black, .2)
           @media all and (min-width: $bp-med)
+            width: 50vw
             height: 60vh
 .events
   lost-center: 720px
@@ -74,54 +74,53 @@
       lost-column: 8/12
       order: inherit
       margin: 0
-    .img-bot
-      width: 75%
-      height: 40vh
-      opacity: .85
-      @media all and (min-width: $bp-med)
-        height: 60vh
-        margin-left: 4rem
-      img
-        height: 40vh
-        object-fit: cover
-        +object-fit(cover)
-        @media all and (min-width: $bp-med)
-          height: 60vh
-    .img-top
-      z-index: 100
-      position: absolute
-      top: 8rem
-      right: 0
-      width: 85%
-      height: 45vh
-      opacity: .9
-      @media all and (min-width: $bp-med)
-        top: 15rem
-        left: 0
-        width: 35%
-        height: 60vh
-        margin: 0
-      img
-        height: 45vh
-        box-shadow: 0 7px 42px rgba($black, .2)
-        object-fit: cover
-        object-position: 75% 50%
-        +object-fit(cover, 75% 50%)
-        @media all and (min-width: $bp-med)
-          height: 60vh
-
-  .motive-content
-    order: 1
-    text-align: right
+  .img-bot
+    opacity: .85
     @media all and (min-width: $bp-med)
-      lost-column: 4/12
-      order: inherit
-    h2
-      text-align: left
-      color: $blue
+      margin-left: 4rem
+    img
+      overflow: hidden
+      width: 25rem
+      height: 15rem
+      object-fit: cover
+      +object-fit(cover)
       @media all and (min-width: $bp-med)
-        padding-left: 3rem
-        text-align: right
+        width: 35rem
+        height: 25rem
+  .img-top
+    z-index: 100
+    position: absolute
+    top: 10rem
+    right: 0
+    opacity: .9
+    @media all and (min-width: $bp-med)
+      top: 15rem
+      left: 0
+      margin: 0
+    img
+      overflow: hidden
+      width: 12rem
+      height: 16rem
+      box-shadow: 0 7px 42px rgba($black, .2)
+      object-fit: cover
+      object-position: 75% 50%
+      +object-fit(cover, 75% 50%)
+      @media all and (min-width: $bp-med)
+        width: 20rem
+        height: 30rem
+
+.motive-content
+  order: 1
+  text-align: right
+  @media all and (min-width: $bp-med)
+    lost-column: 4/12
+    order: inherit
+  h2
+    text-align: left
+    color: $blue
+    @media all and (min-width: $bp-med)
+      padding-left: 3rem
+      text-align: right
 
 .latest-blog
   margin-top: 10rem
@@ -137,117 +136,121 @@
       box-shadow: 0 7px 42px rgba($black, .2)
       @media all and (min-width: $bp-med)
         margin-top: -2rem
-  .latest-entries
-    order: 1
+
+.latest-entries
+  order: 1
+  @media all and (min-width: $bp-med)
+    lost-column: 8/12
+  h2
+    color: $green
     @media all and (min-width: $bp-med)
-      lost-column: 8/12
-    h2
-      color: $green
+      padding-right: 30%
+  ul
+    margin-top: 1.5rem
+    @media all and (min-width: $bp-med)
+      margin: 0
+    li
+      display: flex
+      flex-flow: row wrap
+      align-content: center
+      justify-content: space-between
+      padding: .3rem .5rem
+      line-height: 1.5
+      border-bottom: 1px solid darken($darkbgc, 5%)
       @media all and (min-width: $bp-med)
-        padding-right: 30%
-    ul
-      margin-top: 1.5rem
-      @media all and (min-width: $bp-med)
-        margin: 0
-      li
-        display: flex
-        flex-flow: row wrap
-        align-content: center
-        justify-content: space-between
-        padding: .3rem .5rem
-        line-height: 1.5
-        border-bottom: 1px solid darken($darkbgc, 5%)
+        flex-flow: inherit
+        justify-content: inherit
+        padding: .7rem 1rem
+        line-height: 2
+      &:first-child
+        border-top: 1px solid darken($darkbgc, 5%)
+
+      .date-blog
+        margin-right: 0
+        text-align: left
+        text-transform: uppercase
+        font-size: responsive .6rem .8rem
+        color: darken($bgc, 40%)
+        order: 1
+        flex-basis: auto
         @media all and (min-width: $bp-med)
-          flex-flow: inherit
-          justify-content: inherit
-          padding: .7rem 1rem
-          line-height: 2
-        &:first-child
-          border-top: 1px solid darken($darkbgc, 5%)
-        .date-blog
-          margin-right: 0
-          text-align: left
-          text-transform: uppercase
-          font-size: responsive .6rem .8rem
-          color: darken($bgc, 40%)
-          order: 1
-          flex-basis: auto
+          order: inherit
+          margin-right: 1rem
+          text-align: center
+          line-height: 1.2
+        span
+          display: inline-block
           @media all and (min-width: $bp-med)
-            order: inherit
-            margin-right: 1rem
-            text-align: center
-            line-height: 1.2
-          span
-            display: inline-block
-            @media all and (min-width: $bp-med)
-              display: block
-        .tag-blog
-          margin-left: .4rem
-          color: darken($bgc, 25%)
-          text-transform: uppercase
-          font-size: responsive .6rem .75rem
-          order: 2
-          flex-grow: 1
-          flex-basis: auto
-          @media all and (min-width: $bp-med)
-            order: inherit
-            flex-grow: inherit
-            flex-basis: inherit
-            line-height: 3
-        a
-          font-size: responsive .9rem 1.1rem
-          color: $text
-          border: none
-          order: 3
-          width: 100%
-          @media all and (min-width: $bp-med)
-            order: inherit
-            width: auto
+            display: block
+
+    .tag-blog
+      margin-left: .4rem
+      color: darken($bgc, 25%)
+      text-transform: uppercase
+      font-size: responsive .6rem .75rem
+      order: 2
+      flex-grow: 1
+      flex-basis: auto
+      @media all and (min-width: $bp-med)
+        order: inherit
+        flex-grow: inherit
+        flex-basis: inherit
+        line-height: 3
+
+    a
+      font-size: responsive .9rem 1.1rem
+      color: $text
+      border: none
+      order: 3
+      width: 100%
+      @media all and (min-width: $bp-med)
+        order: inherit
+        width: auto
 
 .enter-catalog
   .enter-catalog-images
     position: relative
     order: 2
+    width: 100%
     margin-top: 2rem
     @media all and (min-width: $bp-med)
       lost-column: 8/12
       order: inherit
       margin: 0
-    .img-bot
-      width: 75%
-      height: 40vh
-      opacity: .85
+
+  .img-bot
+    opacity: .85
+    @media all and (min-width: $bp-med)
+      margin: 0
+    img
+      width: 12rem
+      height: 9rem
+      object-fit: cover
+      +object-fit(cover)
       @media all and (min-width: $bp-med)
-        height: 50vh
-        margin: 0
-      img
-        height: 40vh
-        object-fit: cover
-        +object-fit(cover)
-        @media all and (min-width: $bp-med)
-          height: 50vh
-    .img-top
-      z-index: 100
-      position: absolute
-      top: 10rem
-      right: 0
-      width: 60vw
-      height: 30vh
-      opacity: .85
+        width: 30rem
+        height: 25rem
+
+  .img-top
+    z-index: 100
+    position: absolute
+    top: 7rem
+    right: 0
+    opacity: .85
+    @media all and (min-width: $bp-med)
+      top: 15rem
+      margin-left: 12rem
+    img
+      width: 13rem
+      height: 9rem
+      box-shadow: 0 7px 42px rgba($black, .2)
+      object-fit: cover
+      object-position: 75% 50%
+      +object-fit(cover, 75% 50%)
       @media all and (min-width: $bp-med)
-        top: 20rem
-        left: 0
-        width: 60vw
-        height: 40vh
-        margin-left: 12rem
-      img
-        height: 30vh
-        box-shadow: 0 7px 42px rgba($black, .2)
-        object-fit: cover
-        object-position: 75% 50%
-        +object-fit(cover, 75% 50%)
-        @media all and (min-width: $bp-med)
-          height: 40vh
+        width: 45rem
+        height: 25rem
+
   .enter-catalog-content
     text-align: right
     order: 1

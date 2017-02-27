@@ -11,47 +11,57 @@
 .inner-block
   position: relative
   width: 100%
-  height: 50vh
+  height: auto
+  height: 5rem
+  margin-bottom: 8rem
+  a
+    display: flex
   img
-    position: absolute
+    overflow: hidden
     width: 100%
-    height: 50vh
+    height: auto
     object-fit: cover
     +object-fit(cover)
+    @media all and (min-width: $bp-med)
+      position: absolute
   .block-box
-    @include centerer
     color: $bgc
-    width: 60%
+    width: 100%
     height: auto
     padding: 1rem
-    @media all and (min-width: $bp-med)
-      width: 60%
-      right: 10%
-      bottom: 10%
-    .title
-      margin-bottom: 1rem
-      font-size: responsive .8rem 2rem
-      font-weight: $bold
-      line-height: 1
-    .btn-box
-      position: absolute
-      right: -3%
-      bottom: -8%
-      padding: .25rem .7rem
-      box-shadow: -4px -4px 20px rgba($black, .2)
-    a
-      border: none
-.one-block, .two-block
-  display: flex
-  margin-bottom: 3.5rem
-.one-block
-  @media all and (min-width: $bp-med)
-    lost-column: 4/12 0 0
-    margin-bottom: 0
-.two-block
-  @media all and (min-width: $bp-med)
-    lost-column: 8/12 0 0
-    margin-bottom: 0
+    margin-bottom: 5rem
+    // @media all and (min-width: $bp-med)
+    //   position: absolute
+    //   width: 60%
+    //   right: 10%
+    //   bottom: 10%
+    // .title
+    //   margin-bottom: .5rem
+    //   font-size: responsive 1rem 2rem
+    //   font-weight: $bold
+    //   line-height: 1
+    // .desc
+    //   font-size: responsive .8rem 1.5rem
+    // .btn-box
+    //   position: absolute
+    //   right: -3%
+    //   bottom: -8%
+    //   padding: .25rem .7rem
+    //   box-shadow: -4px -4px 20px rgba($black, .2)
+//     a
+//       border: none
+// .one-block, .two-block
+//   lost-column: 1/2
+//   display: flex
+//   margin-bottom: 2.5rem
+// .one-block
+//   @media all and (min-width: $bp-med)
+//     lost-column: 4/12 0 0
+//     margin-bottom: 0
+// .two-block
+//   @media all and (min-width: $bp-med)
+//     lost-column: 8/12 0 0
+//     margin-bottom: 0
 .ropa
   .block-box, .section-box
     background-color: $green
