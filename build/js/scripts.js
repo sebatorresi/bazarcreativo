@@ -55,7 +55,7 @@ controlit.click(function () {
 });
 
 
-    
+
 
 //Menu
 // Toggle menu
@@ -70,3 +70,13 @@ $(document).ready(function(){
     $(this).toggleClass('open');
   });
 });
+
+
+
+//Isotope
+if (document.location.pathname == "/catalogo.html") {
+  jQuery(document).ready(function($) {
+    $('.catalog').isotope({
+    });
+  });
+}
