@@ -23,18 +23,6 @@ function makeItWork() {
 });
 
 
-//Unslider
-if (document.location.pathname == "/detalle-de-la-marca.html") {
-  jQuery(document).ready(function($) {
-    $('.product-slider').unslider({
-      autoplay: true,
-      infinite: true,
-      arrows: false,
-      delay: 5000
-    });
-  });
-}
-
 var controlit = $("#burger");
 var menuToggle = new TimelineMax({paused:true, reversed:true});
 menuToggle
@@ -55,8 +43,6 @@ controlit.click(function () {
 });
 
 
-
-
 //Menu
 // Toggle menu
 $(document).ready(function(){
@@ -70,7 +56,6 @@ $(document).ready(function(){
     $(this).toggleClass('open');
   });
 });
-
 
 
 //Isotope
