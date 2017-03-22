@@ -109,7 +109,12 @@ i, em
     .newsletter
       @media all and (min-width: $bp-med)
         text-align: right
+      .mc-field-group
+        display: inline-block
+        width: 100%
+        margin-top: 1rem
     .newsletter-input
+      width: 100%
       padding: 14px 16px 14px 12px
       border-radius: 4px
       border: 1px solid $bgc
@@ -169,3 +174,38 @@ i, em
         margin-right: 1rem
         &:last-child
           margin: 0
+
+.mc-field-group
+  display: inline-block
+  width: 100%
+  margin-top: 1rem
+
+.buscador
+  lost-center: 500px
+  margin-top: 8rem
+  position: relative
+  margin-bottom: 2rem
+  padding: 0 1rem
+  @media all and (min-width: $bp-med)
+    margin-top: 15rem
+    text-align: right
+#searchterm
+  width: 100%
+  padding: 14px 16px 14px 12px
+  border-radius: 4px
+  border: 1px solid $bgc
+  font-size: 2rem
+  font-style: italic
+  color: $darkblue
+  background: $bgc
+#search
+  position: absolute
+  top: 0
+  right: 2rem
+  display: inline-block
+  margin-top: 1rem
+  padding: 14px 16px 12px 12px
+  border-radius: 4px
+  border: 1px solid $bgc
+  color: $darkblue
+  background: transparent
