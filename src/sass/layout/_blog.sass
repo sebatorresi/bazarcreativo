@@ -83,6 +83,36 @@
       a
         justify-content: flex-end
 
+.share-entry
+  lost-center: 600px
+  margin-top: 2rem
+  padding-bottom: 1rem
+  text-align: center
+  border-bottom: 1px solid #e5dcc0
+  span
+    display: inline-block
+    margin-right: 1rem
+    padding-top: .35rem
+    text-transform: uppercase
+    font-size: responsive .6rem .8em
+    color: $darkblue
+  a
+    border: none
+  svg
+    width: 28px
+    fill: darken($bgc, 25%)
+    transition: all .5s ease
+    &:hover,
+    &:focus
+      fill: $turk
+  ul
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-top: 1.5rem
+    li
+      margin-right: .5rem
+
 .blog-random
   margin-top: 1rem
   @media all and (min-width: $bp-med)
@@ -122,11 +152,13 @@
     h1
       display: block
       margin: 0
-      padding: 0 0 1.8rem
-      font-size: responsive 2rem 6.5rem
+      padding: 0 0 1rem
+      font-size: responsive 2rem 5rem
       color: $bgc
       border: 1px solid $bgc
       border-width: 1px 0
+      @media all and (min-width: $bp-med)
+        padding: 0 0 1.8rem
     .entry-date, .entry-tag
       display: block
       padding: 1rem 0
@@ -157,61 +189,72 @@
       @media all and (min-width: $bp-med)
         margin-bottom: 3rem
         padding: 0 3rem
+    img
+      display: block
+      width: 100%
+      height: auto
     .full-img, .half-img
       margin-bottom: 1.5rem
       @media all and (min-width: $bp-med)
-        padding: 0 5rem
-        margin-bottom: 3rem
-      figure
-        display: table
-        margin: 0 auto
-        max-width: 100%
-        text-align: center
-        img
-          display: block
-          max-width: 100%
-          width: 100%
-        figcaption
-          display: table-caption
-          caption-side: bottom
-          margin-top: .5rem
-          font-size: responsive .75rem .9em
-          color: darken($bgc, 25%)
-    .full-img
-      figcaption
+        padding: 0 1.5rem
+        margin-bottom: 2rem
+      // figure
+      //   display: table
+      //   margin: 0 auto
+      //   max-width: 100%
+      //   text-align: center
+        // img
+        //   display: block
+        //   width: 100%
+        //   height: auto
+    //     figcaption
+    //       display: table-caption
+    //       caption-side: bottom
+    //       margin-top: .5rem
+    //       font-size: responsive .75rem .9em
+    //       color: darken($bgc, 25%)
+    // .full-img
+    //   figcaption
         text-align: center
     .half-img
       clear: both
       float: none
-      max-width: 600px
+      width: 600px
+      height: auto
       &.img-right
         float: right
-        margin-left: 3rem
+        margin-left: 1.5rem
+        padding-right: 0
       &.img-left
         float: left
-        margin-right: 3rem
-    .img-right
-      figcaption
-        text-align: right
-        padding-right: 1.5rem
-    .img-left
-      figcaption
-        text-align: left
-        padding-left: 1.5rem
+        margin-right: 1.5rem
+        padding-left: 0
+    // .img-right
+    //   figcaption
+    //     text-align: right
+    //     padding-right: 1.5rem
+    // .img-left
+    //   figcaption
+    //     text-align: left
+    //     padding-left: 1.5rem
     blockquote
       width: 100%
-      margin: 0 auto
+      // margin: 0 auto
       padding: 0 1rem 2rem 1rem
-      font-size: responsive 1rem 1.5em
-      font-weight: $bold
       @media all and (min-width: $bp-med)
-        width: 400px
-        padding: 3rem
+        width: 550px
+        padding: 1.5rem
       &:nth-of-type(even)
         float: right
         text-align: right
-        color: $orange
+        p
+          color: $orange
       &:nth-of-type(odd)
         float: left
         text-align: left
-        color: $red
+        p
+          color: $red
+      p
+        margin-bottom: 0
+        font-size: responsive 1rem 1.5em
+        font-weight: $bold

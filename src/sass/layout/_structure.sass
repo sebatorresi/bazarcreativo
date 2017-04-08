@@ -32,6 +32,34 @@ body
   img
     user-select: none
 
+.not-found
+  lost-center: 960px
+  margin-top: 8rem
+  padding: 0 3rem
+  @media all and (min-width: $bp-med)
+    margin-top: 15rem
+    padding: 0
+    h1
+      color: $pinky
+      font-size: 4rem
+    .ouch
+      width: 50%
+      font-size: 3rem
+      font-weight: $bold
+      line-height: 1
+    ul
+      list-style: none
+      margin-top: 1rem
+      padding-left: 1rem
+    li
+      margin-bottom: .5rem
+      a
+        color: $darktext
+    p:last-child
+      margin-top: 2rem
+      padding-bottom: 3rem
+      font-size: .8rem
+
 .section-title
   z-index: -100
   position: absolute
